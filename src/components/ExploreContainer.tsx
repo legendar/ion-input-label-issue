@@ -1,5 +1,6 @@
-import { IonInput, IonButton } from '@ionic/react';
+import { IonInput, IonButton, IonToast } from '@ionic/react';
 import './ExploreContainer.css';
+import InlineToast from './InlineToast';
 
 interface ContainerProps { }
 
@@ -19,6 +20,11 @@ const ExploreContainer: React.FC<ContainerProps> = () => {
         <IonInput label="Username" name="username" labelPlacement="stacked" />
         <IonInput label="Password" name="password" type="password" labelPlacement="stacked" />
         <IonButton type="submit">Submit</IonButton>
+        <IonToast
+          message="Your settings have been saved."
+          position="top"
+          isOpen={true}
+        />
       </form>
     </div>
   );
